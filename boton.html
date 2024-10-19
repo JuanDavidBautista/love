@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botón para ejecutar script de Python</title>
+</head>
+<body>
+    <button onclick="executeScript()">Ejecutalo</button>
+
+    <script>
+        function executeScript() {
+            fetch('http://localhost:8000')
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
